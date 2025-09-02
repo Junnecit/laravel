@@ -8,9 +8,9 @@ use App\Models\facultyModel;
 
 class facultyController extends Controller
 {
-    public function index()
+      public function index()
     {
-        $facultyModel = facultyModel::query();
+        $facultyModel = facultyModel::orderBy('id', 'asc')->paginate(5);
         return view('modules.faculty.index', compact('facultyModel'));
     }
 

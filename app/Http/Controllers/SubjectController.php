@@ -9,8 +9,7 @@ class SubjectController extends Controller
 {
     public function index()
     {
-        // Pass query builder, not the result
-        $subjectModels = SubjectModel::query();
+        $subjectModels = SubjectModel::orderBy('id', 'asc')->paginate(5);
         return view('modules.subjects.index', compact('subjectModels'));
     }
 

@@ -66,11 +66,11 @@
                             @enderror
                         </div>
                         <div class="mt-3">
-                            <label for="dob">Date of Birth :</label>
-                            <input type="date" name="dob" id="dob"
+                            <label for="date_of_birth">Date of Birth :</label>
+                            <input type="date" name="date_of_birth" id="date_of_birth"
                              class="mt-3 border-gray-300 rounded-lg shadow-sm w-full"
-                             placeholder="Birthdate here..." value="{{ old('dob', $studentModel->dob) }}">
-                            @error('dob')
+                             placeholder="Birthdate here..." value="{{ old('date_of_birth', $studentModel->date_of_birth) }}">
+                            @error('date_of_birth')
                                 <div style="color: red;">{{ $message }}</div>
                             @enderror
                         </div>

@@ -9,7 +9,7 @@ class studentController extends Controller
 {
     public function index()
     {
-        $studentModel = studentModel::query();
+        $studentModel = studentModel::orderBy('id', 'asc')->paginate(5);
         return view('modules.students.index', compact('studentModel'));
     }
     public function create()
