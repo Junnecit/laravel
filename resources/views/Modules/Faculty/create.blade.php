@@ -13,11 +13,11 @@
                     <p>You can Add New Faculty</p>
                     <hr class="mt-6 mb-6">
 
-                    {{-- Success message --}}
                     @if (session('success'))
-                        <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
-                            {{ session('success') }}
+                        <div class="border-green-600 p-5" style="color: green;">
+                            <strong>Success! </strong>{{ session('success') }}
                         </div>
+                        <br>
                     @endif
 
 
@@ -63,21 +63,31 @@
                                 value="{{ old('last_name') }}">
                         </div>
 
-                       <div class="mt-3">
+                        <div class="mt-3">
                             <label for="department">Department</label>
                             <select id="department" name="department"
                                 class="mt-2 border-gray-300 rounded-lg shadow-sm w-full">
                                 <option value="">Select Department</option>
-                                <option value="Computer Science" {{ old('department') == 'Computer Science' ? 'selected' : '' }}>Computer Science</option>
-                                <option value="Mathematics" {{ old('department') == 'Mathematics' ? 'selected' : '' }}>Mathematics</option>
-                                <option value="Physics" {{ old('department') == 'Physics' ? 'selected' : '' }}>Physics</option>
-                                <option value="Chemistry" {{ old('department') == 'Chemistry' ? 'selected' : '' }}>Chemistry</option>
-                                <option value="Biology" {{ old('department') == 'Biology' ? 'selected' : '' }}>Biology</option>
-                                <option value="Criminology" {{ old('department') == 'Criminology' ? 'selected' : '' }}>Criminology</option>
+                                <option value="Computer Science"
+                                    {{ old('department') == 'Computer Science' ? 'selected' : '' }}>Computer Science
+                                </option>
+                                <option value="Mathematics" {{ old('department') == 'Mathematics' ? 'selected' : '' }}>
+                                    Mathematics</option>
+                                <option value="Physics" {{ old('department') == 'Physics' ? 'selected' : '' }}>Physics
+                                </option>
+                                <option value="Chemistry" {{ old('department') == 'Chemistry' ? 'selected' : '' }}>
+                                    Chemistry</option>
+                                <option value="Biology" {{ old('department') == 'Biology' ? 'selected' : '' }}>Biology
+                                </option>
+                                <option value="Criminology" {{ old('department') == 'Criminology' ? 'selected' : '' }}>
+                                    Criminology</option>
                                 <option value="AP" {{ old('department') == 'AP' ? 'selected' : '' }}>AP</option>
-                                <option value="BPED" {{ old('department') == 'BPED' ? 'selected' : '' }}>BPED</option>
-                                <option value="Filipino" {{ old('department') == 'Filipino' ? 'selected' : '' }}>Filipino</option>
-                                <option value="English" {{ old('department') == 'English' ? 'selected' : '' }}>English</option>
+                                <option value="BPED" {{ old('department') == 'BPED' ? 'selected' : '' }}>BPED
+                                </option>
+                                <option value="Filipino" {{ old('department') == 'Filipino' ? 'selected' : '' }}>
+                                    Filipino</option>
+                                <option value="English" {{ old('department') == 'English' ? 'selected' : '' }}>English
+                                </option>
                             </select>
                         </div>
 

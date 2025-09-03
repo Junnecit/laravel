@@ -13,11 +13,11 @@
                     <p>You can create new subjects here</p>
                     <hr class="mt-6 mb-6">
 
-                    {{-- Success message --}}
                     @if (session('success'))
-                        <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">
-                            {{ session('success') }}
+                        <div class="border-green-600 p-5" style="color: green;">
+                            <strong>Success! </strong>{{ session('success') }}
                         </div>
+                        <br>
                     @endif
 
 
