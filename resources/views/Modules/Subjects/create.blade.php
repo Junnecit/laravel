@@ -12,7 +12,6 @@
                     <h1 class="text-2xl"><strong>Create New Subject</strong></h1>
                     <p>You can create new subjects here</p>
                     <hr class="mt-6 mb-6">
-
                     @if (session('success'))
                         <div class="border-green-600 p-5" style="color: green;">
                             <strong>Success! </strong>{{ session('success') }}
